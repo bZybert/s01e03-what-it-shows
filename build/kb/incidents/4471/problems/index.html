@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="../../../../_app/immutable/entry/start.r-nwrTVW.js" rel="modulepreload">
+		<link href="../../../../_app/immutable/chunks/BLK8mWvb.js" rel="modulepreload">
+		<link href="../../../../_app/immutable/chunks/CU2JLduF.js" rel="modulepreload">
+		<link href="../../../../_app/immutable/chunks/Csys3nda.js" rel="modulepreload">
+		<link href="../../../../_app/immutable/entry/app.DWsuF7XG.js" rel="modulepreload">
+		<link href="../../../../_app/immutable/chunks/Cp6AtJVk.js" rel="modulepreload">
+		<link href="../../../../_app/immutable/chunks/CJ3Lz6q0.js" rel="modulepreload">
+		<link href="../../../../_app/immutable/chunks/Ct_KVKqD.js" rel="modulepreload">
+		<link href="../../../../_app/immutable/chunks/Bw268IJz.js" rel="modulepreload">
+		<link href="../../../../_app/immutable/nodes/0.C94Hyx71.js" rel="modulepreload">
+		<link href="../../../../_app/immutable/chunks/D5_2Qm3T.js" rel="modulepreload">
+		<link href="../../../../_app/immutable/nodes/5.D7H0zB-w.js" rel="modulepreload">
+		<link href="../../../../_app/immutable/chunks/FZDqwGlM.js" rel="modulepreload">
+		<link href="../../../../_app/immutable/chunks/B8wNM9FB.js" rel="modulepreload">
+		<link href="../../../../_app/immutable/chunks/DPC_LMd3.js" rel="modulepreload">
+		<link href="../../../../_app/immutable/chunks/iXLSwIXB.js" rel="modulepreload">
+		<!--e2jw2j--><!----><title>#4471 · three problems, three tickets · support kb</title>
+		<style>:root{--bg: #fbfaf7;--fg: #1d1d1b;--muted: #6b6a66;--line: #e3e0d8;--accent: #2f6f5e;--warn: #b4501f;--warn-bg: #fbeee6;--note-bg: #eef5f2;--mono: ui-monospace, "Cascadia Code", Menlo, monospace}@media(prefers-color-scheme:dark){:root{--bg: #171716;--fg: #ecebe6;--muted: #9c9a93;--line: #34332f;--accent: #6fbfa6;--warn: #f0905d;--warn-bg: #3a2418;--note-bg: #1d2c27}}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,sans-serif}.kb table{border-collapse:collapse;width:100%;margin:1rem 0;font-size:.92rem}.kb th,.kb td{border-bottom:1px solid var(--line);padding:.35rem .5rem;text-align:left}.kb code{font-family:var(--mono);font-size:.88em}.kb a{color:var(--accent)}.kb.svelte-e2jw2j{max-width:760px;margin:0 auto;padding:2rem 16px 4rem}.crumb.svelte-e2jw2j{font:.8rem var(--mono);text-decoration:none;color:var(--muted)}h1.svelte-e2jw2j{margin:.25rem 0 .5rem;line-height:1.2}.meta.svelte-e2jw2j{display:flex;flex-wrap:wrap;gap:.5rem 1rem;color:var(--muted);font-size:.85rem;margin:0}.status.svelte-e2jw2j{border:1px solid var(--line);border-radius:99px;padding:0 .6rem}.stale.svelte-e2jw2j{color:var(--warn);font-weight:600}.banner.svelte-e2jw2j{background:var(--warn-bg);color:var(--warn);padding:.6rem 1rem;border-radius:6px}footer.svelte-e2jw2j{margin-top:3rem;color:var(--muted);font-size:.8rem;border-top:1px solid var(--line);padding-top:1rem}
+
+aside.svelte-17bri61{border-left:4px solid var(--accent);padding:.5rem 1rem;margin:1rem 0;background:var(--note-bg)}aside.warn.svelte-17bri61{border-color:var(--warn);background:var(--warn-bg)}
+
+.sum.svelte-1op6c6{font-size:1.1rem}.what.svelte-1op6c6,.note.svelte-1op6c6{color:var(--muted);font-size:.85em}.stamp.svelte-1280m42{margin:2rem 0 0;font:.85rem var(--mono);color:var(--muted)}.stamp.svelte-1280m42 b:where(.svelte-1280m42){color:var(--accent);letter-spacing:.04em}.missing.svelte-1280m42{color:var(--warn)}
+</style>
+		<link href="../../../../_app/immutable/assets/runbook.BhhgOc_n.css" rel="stylesheet" disabled media="(max-width: 0)">
+		<link href="../../../../_app/immutable/assets/Callout.yLErXQDM.css" rel="stylesheet" disabled media="(max-width: 0)">
+		<link href="../../../../_app/immutable/assets/5.g0lZtfBM.css" rel="stylesheet" disabled media="(max-width: 0)">
+  </head>
+  <body data-sveltekit-preload-data="hover">
+    <div style="display: contents"><!--[--><!--[0--><!--[--><!--[--><div class="kb svelte-e2jw2j"><header><a class="crumb svelte-e2jw2j" href="/kb">support desk · kb</a> <h1 class="svelte-e2jw2j">#4471 · three problems, three tickets</h1> <p class="meta svelte-e2jw2j"><span>owner <b>bZybert</b></span> <span class="status open svelte-e2jw2j">open</span> <span class="svelte-e2jw2j">reviewed 2026-10-30 · 0 days ago</span></p></header> <!--[-1--><!--]--> <main><p><a href="/kb/incidents/4471">#4471</a> is marked known: one bug, one fix queued. It is not one bug. The desk
+merged on subject line (<a href="/kb/decisions/0001-dedupe-by-subject">decision 0001</a>), and every one of
+these reports has a subject like “wrong day” or “dates mixed up”, whatever broke the date. Read by
+tenant, channel and body, the reports split into three problems. Each now has its own ticket.</p> <aside class="warn svelte-17bri61"><!---->The queued parser fix closes only the parser row. The hint row and the one-day moves keep coming
+in after it ships.<!----></aside><!----> <h2>What is in #4471</h2> <p class="sum svelte-1op6c6"><strong>412</strong> reports merged into #4471 · <strong>2</strong> causes · one ticket per problem</p> <table><thead><tr><th>problem</th><th>reports</th><th>what goes wrong</th><th>tenants</th><th>seen</th><th>ticket</th></tr></thead><tbody><!--[--><tr><td><code>parser</code></td><td><strong>379</strong></td><td class="what svelte-1op6c6">the shared parser reads a day-first date month first: day and month swap</td><td>11</td><td>2026-04-01 → 2026-10-04</td><td><!--[0--><a href="https://github.com/bZybert/s01e03-what-it-shows/issues/1">#1</a><!--]--></td></tr><tr><td><code>hint</code></td><td><strong>33</strong></td><td class="what svelte-1op6c6">booking-v3 prints MM/DD/YYYY under its date field; people type month first, the form reads day first</td><td>3</td><td>2026-04-17 → 2026-09-22</td><td><!--[0--><a href="https://github.com/bZybert/s01e03-what-it-shows/issues/2">#2</a><!--]--></td></tr><!--]--></tbody></table> <!--[--><!--[0--><p class="note svelte-1op6c6"><code>one-day-move</code>: <strong>5</strong> of the <code>parser</code> reports read as a one-day
+      move (the date moves by one day, not a swap: a time-zone shift). Counted under <code>parser</code>, where they are filed; their own ticket is <a href="https://github.com/bZybert/s01e03-what-it-shows/issues/3">#3</a>.</p><!--]--><!--[-1--><!--]--><!--]--><!----> <h2>The three problems</h2> <p><strong><code>parser</code>: the shared parser reads dates month first.</strong> Every tenant on file writes the day
+first. Day and month swap: “booked for 2 March, the invite says 3 February”. This is the bug
+#4471 names, and the fix it has queued.</p> <p><strong><code>hint</code>: booking-v3 tells people to type the month first.</strong> Its date field prints <code>MM/DD/YYYY</code>; booking-v2 prints <code>DD/MM/YYYY</code>. A day-first tenant’s people follow the hint, and
+the form reads what they typed the tenant’s way. The symptom is the same swap, but it comes from
+the form, so the parser fix does not touch it. It only reaches reports sent through the form of a
+booking-v3 tenant.</p> <p><strong><code>one-day-move</code>: the date moves by a day.</strong> No swap: “Tuesday 6 October showed as Monday”,
+“Client in Lisbon got Tuesday, client in Toronto got Monday”. That is a time-zone shift. The desk
+lists these reports apart in its notes and counts them under <code>parser</code>, where they are filed; this
+page counts them the same way and footnotes them under <code>parser</code>, with their own ticket.</p> <h2>How to tell them apart</h2> <ul><li>Do not trust the intake tag. Intake guesses from the reporter’s browser; the cause depends on
+the tenant’s locale, its booking form and the channel (<code>causes.ts</code>). The two disagree often.</li> <li>A swap through a booking-v3 form is <code>hint</code>. Any other swap is <code>parser</code>.</li> <li>A date one day off is <code>one-day-move</code>, whatever the subject says.</li> <li>One id is one report: the ticket export repeats some reports, and they count once.</li></ul> <h2>What changes for the desk</h2> <ul><li>Merge new reports into the ticket for their problem, not into the ticket with the same subject.</li> <li>Keep #4471 for the parser. Close it only when the parser fix ships and the other two tickets
+are open on their own.</li></ul> <!--[0--><p class="stamp svelte-1280m42">desk ref <b class="svelte-1280m42">DR-TJFE-X6R7</b></p><!--]--><!----><!----></main> <footer class="svelte-e2jw2j">Pages are written by people. Tables and charts are built from data at render time.</footer></div><!--]--><!----><!--]--><!--]--> <!--[-1--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_1o6hdh8 = {
+						base: new URL("../../../..", location).pathname.slice(0, -1)
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("../../../../_app/immutable/entry/start.r-nwrTVW.js"),
+						import("../../../../_app/immutable/entry/app.DWsuF7XG.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 5],
+							data: [null,null],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+  </body>
+</html>

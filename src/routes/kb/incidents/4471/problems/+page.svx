@@ -19,7 +19,8 @@ these reports has a subject like "wrong day" or "dates mixed up", whatever broke
 tenant, channel and body, the reports split into three problems. Each now has its own ticket.
 
 <Callout kind="warn">
-The queued parser fix closes only the first row. The other two keep coming in after it ships.
+The queued parser fix closes only the parser row. The hint row and the one-day moves keep coming
+in after it ships.
 </Callout>
 
 ## What is in #4471
@@ -40,7 +41,8 @@ booking-v3 tenant.
 
 **`one-day-move`: the date moves by a day.** No swap: "Tuesday 6 October showed as Monday",
 "Client in Lisbon got Tuesday, client in Toronto got Monday". That is a time-zone shift. The desk
-already listed these reports apart in its notes, but counted them under `parser`.
+lists these reports apart in its notes and counts them under `parser`, where they are filed; this
+page counts them the same way and footnotes them under `parser`, with their own ticket.
 
 ## How to tell them apart
 

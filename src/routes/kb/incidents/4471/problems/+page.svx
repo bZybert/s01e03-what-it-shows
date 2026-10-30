@@ -1,0 +1,59 @@
+---
+layout: runbook
+title: '#4471 · three problems, three tickets'
+owner: bZybert
+status: open
+reviewed: 2026-10-30
+signature: bZybert
+---
+
+<script>
+  import ProblemTable from '#lib/kb/ProblemTable.svelte';
+  import Callout from '#lib/kb/Callout.svelte';
+  import RenderStamp from '#lib/kb/RenderStamp.svelte';
+</script>
+
+[#4471](/kb/incidents/4471) is marked known: one bug, one fix queued. It is not one bug. The desk
+merged on subject line ([decision 0001](/kb/decisions/0001-dedupe-by-subject)), and every one of
+these reports has a subject like "wrong day" or "dates mixed up", whatever broke the date. Read by
+tenant, channel and body, the reports split into three problems. Each now has its own ticket.
+
+<Callout kind="warn">
+The queued parser fix closes only the first row. The other two keep coming in after it ships.
+</Callout>
+
+## What is in #4471
+
+<ProblemTable ticket={4471} />
+
+## The three problems
+
+**`parser`: the shared parser reads dates month first.** Every tenant on file writes the day
+first. Day and month swap: "booked for 2 March, the invite says 3 February". This is the bug
+#4471 names, and the fix it has queued.
+
+**`hint`: booking-v3 tells people to type the month first.** Its date field prints
+`MM/DD/YYYY`; booking-v2 prints `DD/MM/YYYY`. A day-first tenant's people follow the hint, and
+the form reads what they typed the tenant's way. The symptom is the same swap, but it comes from
+the form, so the parser fix does not touch it. It only reaches reports sent through the form of a
+booking-v3 tenant.
+
+**`one-day-move`: the date moves by a day.** No swap: "Tuesday 6 October showed as Monday",
+"Client in Lisbon got Tuesday, client in Toronto got Monday". That is a time-zone shift. The desk
+already listed these reports apart in its notes, but counted them under `parser`.
+
+## How to tell them apart
+
+- Do not trust the intake tag. Intake guesses from the reporter's browser; the cause depends on
+  the tenant's locale, its booking form and the channel (`causes.ts`). The two disagree often.
+- A swap through a booking-v3 form is `hint`. Any other swap is `parser`.
+- A date one day off is `one-day-move`, whatever the subject says.
+- One id is one report: the ticket export repeats some reports, and they count once.
+
+## What changes for the desk
+
+- Merge new reports into the ticket for their problem, not into the ticket with the same subject.
+- Keep #4471 for the parser. Close it only when the parser fix ships and the other two tickets
+  are open on their own.
+
+<RenderStamp {signature} />

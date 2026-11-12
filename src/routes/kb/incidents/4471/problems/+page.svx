@@ -4,7 +4,7 @@ title: '#4471 · three problems, three tickets'
 owner: bZybert
 status: open
 reviewed: 2026-10-30
-signature: bZybert
+signature: 'v1.eyJzdWIiOiIzODUwIiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTQ0OTE1MDgsImV4cCI6MTc5NDU3NzkwOH0.VeECAHmIBiAYjowsDcQhE7YRCOq3mZyWRJPgfMHVF0Q'
 ---
 
 <script>
